@@ -1,0 +1,74 @@
+.login__container,
+.join__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 7rem 0;
+}
+
+.login__title,
+.join__title {
+  margin: 3rem 0;
+}
+
+.login__h2,
+.join__h2 {
+  font-size: 2em;
+}
+
+.login-form,
+.join-form {
+  width: 50%;
+}
+
+.login-btn,
+.join-btn {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  background-color: rgb(224, 0, 127, 0.5);
+  height: 90px;
+  padding: 30px 14px;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.4s;
+  outline: none;
+  cursor: pointer;
+}
+
+.login-btn:hover,
+.join-btn:hover {
+  background-color: #e0007f;
+}
+
+.form-login,
+.form-join {
+  display: block;
+  width: 100%;
+  padding: 12px 12px;
+  color: #333;
+  font-size: 18px;
+  height: 70px;
+  border: #c9c9c9 2px solid;
+  border-radius: 6px;
+  outline: 0;
+  margin-bottom: 2rem;
+}
+
+.findInfo {
+  margin: 2rem 0;
+}
+
+.findInfo a {
+  color: #333;
+  border-right: 1px solid;
+  padding-right: 5px;
+}
+
+.findInfo a:last-child {
+  border: 0;
+}
