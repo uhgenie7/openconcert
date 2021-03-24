@@ -54,7 +54,19 @@
     <!-- js script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/openconcert/js/custom.js"></script>
-    <script src="/openconcert/js/scroll.js"></script>
-
+    <script>
+      // wrap height에 따른 footer 조건문
+      // const wrap = document.querySelector(".wrap");
+      // const footer = document.querySelector(".footer");
+      // const wrapInfo = wrap.getBoundingClientRect();
+      // const wrapHeight = wrapInfo.height;
+      // console.log(wrapHeight);
+      // if (wrapHeight > 768) {
+      //   footer.style.position = "relative";
+      // } else {
+      //   footer.style.position = "fixed";
+      //   footer.style.bottom = 0;
+      // }
+    </script>
   </body>
 </html>

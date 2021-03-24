@@ -2,6 +2,10 @@
 
 /* reset */
 
+html {
+  height: 100%;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
@@ -40,7 +44,9 @@ body {
 
 .wrap {
   position: relative;
+  min-height: 100%;
   padding-top: 82px;
+  padding-bottom: 144px;
 }
 
 /* header */
@@ -249,6 +255,8 @@ body {
   width: 100%;
   background: #262626;
   padding: 1.5rem 0;
+  position: absolute;
+  bottom: 0;
 }
 
 .footer__container {
