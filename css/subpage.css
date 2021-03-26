@@ -13,8 +13,19 @@
 .sub-title h2 {
   font-size: 70px;
   font-weight: 700;
-  color: #000;
+  color: #222;
   letter-spacing: 0.02em;
+  animation: letter 1s forwards;
+}
+
+@keyframes letter {
+  from {
+    letter-spacing: normal;
+  }
+
+  to {
+    letter-spacing: 27px;
+  }
 }
 
 /* opc section */
@@ -151,4 +162,70 @@
 .noti-hit,
 .qna-hit {
   width: 5%;
+}
+
+.noti__btns {
+  text-align: right;
+}
+
+.noti__textarea {
+  width: 100%;
+  height: 412px;
+  display: none;
+  background: #ffff;
+}
+
+.noti-write {
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: #e0007f;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#title {
+  display: block;
+  width: 100%;
+  padding: 12px 12px;
+  color: #333;
+  font-size: 18px;
+  height: 70px;
+  border: #c9c9c9 2px solid;
+  border-radius: 6px;
+  outline: 0;
+  margin-bottom: 1rem;
+}
+
+.se2_inputarea {
+  background: white;
+}
+
+/* goods section */
+.goods__container {
+  margin: 5rem auto;
+}
+
+.goods__lists {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goods__list {
+  width: 20%;
+  padding: 20px;
+}
+
+.goods__imgbox {
+  width: 100%;
+}
+
+.goods__img {
+  width: 100%;
+}
+
+.goods__des {
+  width: 100%;
 }
