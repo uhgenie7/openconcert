@@ -18,6 +18,9 @@
     ></script>
     <!-- css file -->
     <link rel="stylesheet" href="/openconcert/css/style.css" />
+    <!-- light slider css -->
+    <link type="text/css" rel="stylesheet" href="/openconcert/plugin/lightslider.css" /> 
+    <!-- responsive css -->
     <link rel="stylesheet" href="/openconcert/css/media.css" />
     <title>OPEN CONCERT</title>
   </head>
@@ -42,37 +45,45 @@
       <section class="best__section center">
         <div class="best__container">
           <h2 class="best__title">Best Contents</h2>
-          <p>
+          <p class="best__p">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
             corporis reiciendis voluptate id, rem iste cupiditate amet quos
             nihil consequuntur molestiae dolor perferendis quis commodi suscipit
             distinctio hic reprehenderit ipsum!
           </p>
         </div>
-        <ul class="best__lists">
+        <ul id="bestLists" class="best__lists">
           <li class="best__list">
-            <div class="best__video">1</div>
-            <h3>꽃이 없으면 쓸쓸한</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
-              nostrum consequuntur,
-            </p>
+                <div class="best__video">1</div>
+                <h3>꽃이 없으면 쓸쓸한</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
+                  nostrum consequuntur,
+                </p>
           </li>
           <li class="best__list">
-            <div class="best__video">1</div>
-            <h3>꽃이 없으면 쓸쓸한</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
-              nostrum consequuntur,
-            </p>
+                <div class="best__video">1</div>
+                <h3>꽃이 없으면 쓸쓸한</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
+                  nostrum consequuntur,
+                </p>
           </li>
           <li class="best__list">
-            <div class="best__video">1</div>
-            <h3>꽃이 없으면 쓸쓸한</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
-              nostrum consequuntur,
-            </p>
+                <div class="best__video">1</div>
+                <h3>꽃이 없으면 쓸쓸한</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
+                  nostrum consequuntur,
+                </p>
+          </li>
+                    <li class="best__list">
+                <div class="best__video">1</div>
+                <h3>꽃이 없으면 쓸쓸한</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
+                  nostrum consequuntur,
+                </p>
           </li>
         </ul>
       </section>
@@ -80,6 +91,10 @@
     </div>
     <!-- js script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- light slider -->
+    <script src="/openconcert/plugin/lightslider.js"></script>
+    <script src="/openconcert/js/slider.js"></script>
+    <!-- custom js -->
     <script src="/openconcert/js/custom.js"></script>
   </body>
 </html>
