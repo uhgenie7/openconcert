@@ -1,5 +1,5 @@
 <footer class="footer">
-        <div class="footer__container">
+        <div class="footer__container center">
           <div class="footer__info">
             <div class="footer__logo">
               <div class="opc__logo">
@@ -10,9 +10,8 @@
             </div>
             <div>
               <address class="footer__address">
-                (주)오픈콘서트 ㅣ 대표이사 : 박오픈<br />서울시 강남구 학동로
-                401 13층<br />
-                전화번호 080-000-7700 (수신자 부담) ㅣ 팩스번호 02-000-0000<br />E-MAIL
+                (주)오픈콘서트 ㅣ 대표이사 : 박오픈<br />
+                전화번호 080-000-7700 (수신자 부담)<br />E-MAIL
                 info@oct.co.kr
               </address>
             </div>
