@@ -3,6 +3,11 @@
   .header__nav.show {
     overflow-y: scroll;
   }
+
+  .header__nav ul {
+    height: 100%;
+    padding: 82px 0;
+  }
 }
 
 /* width responsive */
@@ -30,6 +35,10 @@
     width: auto;
   }
 
+  .header__nav {
+    font-size: 60px;
+  }
+
   /* footer */
   .footer__container {
     justify-content: space-between;
@@ -37,10 +46,17 @@
 }
 
 @media screen and (max-width: 768px) {
+  /* header */
+  .header__nav {
+    font-size: 45px;
+  }
+
+  /* section */
   .best__p {
     display: none;
   }
 
+  /* footer */
   .footer__container {
     display: block;
   }
