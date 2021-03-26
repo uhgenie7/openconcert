@@ -23,7 +23,7 @@
 <header class="header">
       <div class="header__container">
           <div class="header__info">
-            <a href="#" class="header__link">안내</a>
+            <a href="/openconcert/page/opc/opc.php" class="header__link">안내</a>
           </div>
           <div class="header__info">
             <a href="/openconcert/index.php"
@@ -36,14 +36,12 @@
             ?>
               <a href="/openconcert/page/login/join.php" class="header--join">회원가입</a>
               <a href="/openconcert/page/login/login.php" class="header--login">로그인</a>
-
             <?php 
               } else {
                   if($userlevel == 1) {
             ?>
               <a href="#" class="header--my">ADMIN</a>
               <a href="/openconcert/process/login/logout.php" class="header--logout">로그아웃</a>
-
             <?php
             } else {
             ?>
@@ -54,11 +52,8 @@
                 }
               }
             ?>
-
-
             <i class="fas fa-bars"></i>
             <i class="fas fa-times"></i>
-
           </div>
         </div>
         <div class="header__nav">
