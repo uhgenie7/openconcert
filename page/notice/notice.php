@@ -39,34 +39,39 @@
               <span class="noti-reg">등록일</span>
               <span class="noti-hit">조회수</span>
             </li>
-            <li class="noti__title">
-              <span class="noti-num">1</span>
-              <span class="noti-id">admin</span>
-              <span class="noti-tit">공지사항입니다</span>
-              <span class="noti-reg">2021-03-23</span>
-              <span class="noti-hit">3</span>
-            </li>
+                <?php
+                    include $_SERVER['DOCUMENT_ROOT'].'/openconcert/process/connect/db_connect.php';
+                    $sql="select * from opc_noti order by OPC_NOTI_num desc limit 5";
+                    $noti_result=mysqli_query($dbConn, $sql);
+                    while($noti_row=mysqli_fetch_array($noti_result)){
+                      $noti_res_num=$noti_row['OPC_NOTI_num'];
+                      $noti_res_tit=$noti_row['OPC_NOTI_tit'];
+                      $noti_res_reg=$noti_row['OPC_NOTI_reg'];
+                      $noti_res_hit=$noti_row['OPC_NOTI_hit'];
+                      $new_hit=$noti_res_hit + 1;
+                      $sql="update opc_noti set OPC_NOTI_hit=$new_hit where OPC_NOTI_num=$noti_res_num";
+                ?>
+              <li class="noti__title">
+                <span class="noti-num"><?=$noti_res_num?></span>
+                <span class="noti-id">ADMIN</span>
+                <span class="noti-tit"><?=$noti_res_tit?></span>
+                <span class="noti-reg"><?=$noti_res_reg?></span>
+                <span class="noti-hit"><?=$noti_res_hit?></span>
+              </li>
+                <?php
+                }
+                ?>
           </ul>
         </div>
+        <div class="noti__btns center">
+          <button class="noti-write" onclick="location.href='/openconcert/page/notice/notice_input_form.php'">글쓰기</button>
+        </div>
+
       </section>
       <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/footer.php" ?>
     </div>
     <!-- js script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/openconcert/js/custom.js"></script>
-    <script>
-      // wrap height에 따른 footer 조건문
-      // const wrap = document.querySelector(".wrap");
-      // const footer = document.querySelector(".footer");
-      // const wrapInfo = wrap.getBoundingClientRect();
-      // const wrapHeight = wrapInfo.height;
-      // console.log(wrapHeight);
-      // if (wrapHeight > 768) {
-      //   footer.style.position = "relative";
-      // } else {
-      //   footer.style.position = "fixed";
-      //   footer.style.bottom = 0;
-      // }
-    </script>
   </body>
 </html>
