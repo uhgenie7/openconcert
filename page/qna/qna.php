@@ -28,7 +28,7 @@
       <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/header.php" ?>
       <section class="qna__section">
         <div class="sub-title">
-          <h2>Q&A</h2>
+          <h2><a href="/openconcert/page/qna/qna.php">Q&A</a></h2>
         </div>
         <div class="qna__container center">
           <ul class="qna__lists">
@@ -39,15 +39,43 @@
               <span class="qna-reg">등록일</span>
               <span class="qna-hit">조회수</span>
             </li>
-            <li class="qna__title">
-              <span class="qna-num">1</span>
-              <span class="qna-id">guest</span>
-              <span class="qna-tit">공연 구매 문의합니다.</span>
-              <span class="qna-reg">2021-03-23</span>
-              <span class="qna-hit">3</span>
-            </li>
+                <?php
+                    include $_SERVER['DOCUMENT_ROOT'].'/openconcert/process/connect/db_connect.php';
+                    $sql="select * from opc_qna order by OPC_QNA_num desc limit 5";
+                    $qna_result=mysqli_query($dbConn, $sql);
+                    while($qna_row=mysqli_fetch_array($qna_result)){
+                      $qna_res_num=$qna_row['OPC_QNA_num'];
+                      $qna_res_id=$qna_row['OPC_QNA_name'];
+                      $qna_res_tit=$qna_row['OPC_QNA_tit'];
+                      $qna_res_reg=$qna_row['OPC_QNA_reg'];
+                      $qna_res_hit=$qna_row['OPC_QNA_hit'];
+                ?>
+              <li class="qna__title">
+                <span class="qna-num"><?=$qna_res_num?></span>
+                <span class="qna-id"><?=$qna_res_id?></span>
+                <span class="qna-tit"><a href="/openconcert/page/qna/qna_view.php?num=<?=$qna_res_num?>"class="qna-link"><?=$qna_res_tit?></a></span>
+                <span class="qna-reg"><?=$qna_res_reg?></span>
+                <span class="qna-hit"><?=$qna_res_hit?></span>
+              </li>
+                <?php
+                }
+                ?>
           </ul>
+          <div class="qna__btns">
+            <?php
+              if($userid==''){
+            ?>
+                <button class="write-btn" onclick="plzLogin()">글쓰기</button>
+            <?php
+              } else {
+              ?>
+                <button class="write-btn" onclick="location.href='/openconcert/page/qna/qna_input_form.php'">글쓰기</button>
+           <?php
+              }
+              ?>
         </div>
+        </div>
+
       </section>
       <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/footer.php" ?>
     </div>
@@ -55,6 +83,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/openconcert/js/custom.js"></script>
     <script>
+      function plzLogin(){
+        alert('글쓰기를 하시려면 로그인이 필요합니다.');
+      }
     </script>
   </body>
 </html>
