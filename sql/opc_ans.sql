@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `opc_ans` (
   `OPC_ANS_num` int(11) NOT NULL COMMENT '고유번호',
   `OPC_ANS_QNA_num` int(11) NOT NULL COMMENT '질문글 번호',
-  `OPC_ANS_con` text CHARACTER SET utf8 NOT NULL COMMENT '답글내용',
+  `OPC_ANS_des` text CHARACTER SET utf8 NOT NULL COMMENT '답글내용',
   `OPC_ANS_reg` varchar(15) CHARACTER SET utf8 NOT NULL COMMENT '등록일'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

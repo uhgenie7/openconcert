@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `opc_qna` (
   `OPC_QNA_num` int(11) NOT NULL COMMENT '고유번호',
-  `OPC_QNA_id` varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '글쓴이',
+  `OPC_QNA_name` varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '글쓴이',
   `OPC_QNA_tit` varchar(50) CHARACTER SET utf8 NOT NULL COMMENT '글제목',
-  `OPC_QNA_con` text CHARACTER SET utf8 NOT NULL COMMENT '글내용',
+  `OPC_QNA_desc` text CHARACTER SET utf8 NOT NULL COMMENT '글내용',
   `OPC_QNA_reg` varchar(15) CHARACTER SET utf8 NOT NULL COMMENT '등록일',
   `OPC_QNA_hit` int(11) NOT NULL COMMENT '조회수'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
