@@ -28,7 +28,7 @@
       <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/header.php" ?>
       <section class="noti__section">
         <div class="sub-title">
-          <h2>NOTICE</h2>
+          <h2><a href="/openconcert/page/notice/notice.php">NOTICE</a></h2>
         </div>
         <div class="noti__container center">
           <ul class="noti__lists">
@@ -48,13 +48,11 @@
                       $noti_res_tit=$noti_row['OPC_NOTI_tit'];
                       $noti_res_reg=$noti_row['OPC_NOTI_reg'];
                       $noti_res_hit=$noti_row['OPC_NOTI_hit'];
-                      $new_hit=$noti_res_hit + 1;
-                      $sql="update opc_noti set OPC_NOTI_hit=$new_hit where OPC_NOTI_num=$noti_res_num";
                 ?>
               <li class="noti__title">
                 <span class="noti-num"><?=$noti_res_num?></span>
                 <span class="noti-id">ADMIN</span>
-                <span class="noti-tit"><?=$noti_res_tit?></span>
+                <span class="noti-tit"><a href="/openconcert/page/notice/noti_view.php?num=<?=$noti_res_num?>" class="noti-link"><?=$noti_res_tit?></a></span>
                 <span class="noti-reg"><?=$noti_res_reg?></span>
                 <span class="noti-hit"><?=$noti_res_hit?></span>
               </li>
@@ -62,10 +60,20 @@
                 }
                 ?>
           </ul>
+          <div class="noti__btns">
+            <?php
+                if($userlevel == 1){
+            ?>
+              <button class="write-btn" onclick="location.href='/openconcert/page/notice/notice_input_form.php'">글쓰기</button>
+            <?php
+                } else {
+            ?>
+            <?php
+                }
+            ?>
         </div>
-        <div class="noti__btns center">
-          <button class="noti-write" onclick="location.href='/openconcert/page/notice/notice_input_form.php'">글쓰기</button>
         </div>
+
 
       </section>
       <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/footer.php" ?>
