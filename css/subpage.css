@@ -18,6 +18,10 @@
   animation: letter 1s forwards;
 }
 
+.sub-title a {
+  color: #222;
+}
+
 @keyframes letter {
   from {
     letter-spacing: normal;
@@ -137,6 +141,12 @@
   display: inline-block;
   text-align: center;
   padding: 10px 5px;
+  font-weight: 700;
+}
+
+.noti-link,
+.qna-link {
+  color: rgb(0, 0, 0);
 }
 
 .noti-num,
@@ -164,18 +174,19 @@
   width: 5%;
 }
 
-.noti__btns {
-  text-align: right;
-}
-
-.noti__textarea {
+.noti__btns,
+.qna__btns {
   width: 100%;
-  height: 412px;
-  display: none;
-  background: #ffff;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.noti-write {
+.write-btn,
+.modi-btn,
+.delete-btn,
+.list-btn {
+  display: inline-block;
   outline: none;
   padding: 10px 20px;
   border-radius: 30px;
@@ -186,7 +197,13 @@
   cursor: pointer;
 }
 
-#title {
+.noti__container .noti__btns,
+.qna__container .qna__btns {
+  justify-content: flex-end;
+}
+
+#notiTitle,
+#qnaTitle {
   display: block;
   width: 100%;
   padding: 12px 12px;
@@ -199,8 +216,19 @@
   margin-bottom: 1rem;
 }
 
-.se2_inputarea {
-  background: white;
+.noti__desc,
+.qna__desc {
+  width: 100%;
+  height: 412px;
+  background: #ffff;
+  display: block;
+  padding: 12px 12px;
+  color: #333;
+  font-size: 18px;
+  border: #c9c9c9 2px solid;
+  border-radius: 6px;
+  outline: 0;
+  margin-bottom: 1rem;
 }
 
 /* goods section */
@@ -228,4 +256,50 @@
 
 .goods__des {
   width: 100%;
+}
+
+/* view page */
+.view__container {
+  margin: 5rem auto;
+}
+
+.view-title h4 {
+  padding: 18px 20px 15px;
+  line-height: 1.6;
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 0;
+  word-wrap: break-word;
+  font-weight: 400;
+  background: #ddd;
+  border-top: 2px solid #000;
+}
+
+.view-reg {
+  display: flex;
+}
+
+.view-reg p,
+.view-des p,
+.view-list {
+  padding: 18px 20px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.view-list {
+  color: #5b5b5b;
+}
+
+.view-list a {
+  color: #5b5b5b;
+}
+
+.view-prev::before {
+  content: "▲";
+  padding: 0 25px 0 15px;
+}
+
+.view-next::before {
+  content: "▼";
+  padding: 0 25px 0 15px;
 }
