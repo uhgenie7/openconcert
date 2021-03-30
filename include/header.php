@@ -1,20 +1,20 @@
 <?php
 
   session_start();
-  if(isset($_SESSION["userid"])){
-    $userid=$_SESSION["userid"];
+  if(isset($_SESSION["userID"])){
+    $userid=$_SESSION["userID"];
   } else {
     $userid='';
   }
 
-  if(isset($_SESSION["userpoint"])){
-    $userpoint=$_SESSION["userpoint"];
+  if(isset($_SESSION["userPoint"])){
+    $userpoint=$_SESSION["userPoint"];
   } else {
     $userpoint='';
   }
 
-  if(isset($_SESSION["userlevel"])){
-    $userlevel=$_SESSION["userlevel"];
+  if(isset($_SESSION["userLevel"])){
+    $userlevel=$_SESSION["userLevel"];
   } else {
     $userlevel='';
   }

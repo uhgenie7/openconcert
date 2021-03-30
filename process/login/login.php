@@ -35,9 +35,9 @@
     ";
     } else {
       session_start();
-      $_SESSION["userid"]=$row['OPC_mem_id'];
-      $_SESSION["userpoint"]=$row['OPC_mem_point'];
-      $_SESSION["userlevel"]=$row['OPC_mem_level'];
+      $_SESSION["userID"]=$row['OPC_mem_id'];
+      $_SESSION["userPoint"]=$row['OPC_mem_point'];
+      $_SESSION["userLevel"]=$row['OPC_mem_level'];
 
       
       echo "
