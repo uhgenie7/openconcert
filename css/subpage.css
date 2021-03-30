@@ -16,6 +16,7 @@
   color: #222;
   letter-spacing: 0.02em;
   animation: letter 1s forwards;
+  text-align: center;
 }
 
 .sub-title a {
@@ -28,7 +29,7 @@
   }
 
   to {
-    letter-spacing: 27px;
+    letter-spacing: 16px;
   }
 }
 
@@ -81,6 +82,7 @@
 .perform__des {
   background: #e0e0e0;
   position: relative;
+  padding: 20px;
 }
 
 .perform__btns {
@@ -142,11 +144,17 @@
   text-align: center;
   padding: 10px 5px;
   font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .noti-link,
 .qna-link {
   color: rgb(0, 0, 0);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .noti-num,
@@ -231,18 +239,59 @@
   margin-bottom: 1rem;
 }
 
+.pager {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.pager a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 38px;
+  border: 1px solid;
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 2px;
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.pager a.on {
+  background: #333;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.pager .page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* goods section */
 .goods__container {
   margin: 5rem auto;
 }
 
+.goods__container.center {
+  width: 90%;
+  height: auto;
+  max-width: 90%;
+}
+
 .goods__lists {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .goods__list {
-  width: 20%;
   padding: 20px;
 }
 
