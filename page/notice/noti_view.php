@@ -39,6 +39,10 @@
         $new_hit=$noti_detail_hit + 1;
         $sql="update opc_noti set OPC_NOTI_hit=$new_hit where OPC_NOTI_num=$noti_detail_num";
         mysqli_query($dbConn, $sql);
+        // DB ROW COUNT
+        $query = "SELECT * FROM opc_noti";
+        $data = mysqli_query($dbConn, $query);
+        $total_rows = mysqli_num_rows($data);
       ?>
       <section class="view__section">
         <div class="sub-title">
@@ -54,10 +58,52 @@
           <div class="view-des">
             <p><?=$noti_detail_new_des?></p>
           </div>
-            <div class="view-list">이전글<span class="view-prev">등록된 이전글이 없습니다.</span>
+            <div class="view-list">이전글<span class="view-prev">
+            <?php
+            if($noti_detail_num - 1 == 0){
+            ?>
+              등록된 이전글이 없습니다.</span>
             </div>
-            <div class="view-list">다음글<span class="view-next">등록된 다음글이 없습니다.</span>
+            <?php
+                } else {
+              // 이전글 넘버
+              $prev_num=$noti_detail_num-1;
+              $prev_sql="select * from opc_noti where OPC_NOTI_num=$prev_num";
+              $prev_result=mysqli_query($dbConn, $prev_sql);
+              $prev_row=mysqli_fetch_array($prev_result);
+              $prev_noti_detail_tit=$prev_row['OPC_NOTI_tit'];
+              // echo $prev_noti_detail_tit;
+            ?>
+            <a href="/openconcert/page/notice/noti_view.php?num=<?=$prev_num?>">
+              <?=$prev_noti_detail_tit?></a></span>
+              </div>
+            <?php
+                }
+            ?>
+            <div class="view-list">다음글<span class="view-next">
+            <?php
+            if($noti_detail_num == $total_rows){
+            ?>
+              등록된 다음글이 없습니다.
+            </span>
             </div>
+            <?php
+                } else {
+            // 다음글 넘버
+            $next_num=$noti_detail_num+1;
+            $next_sql="select * from opc_noti where OPC_NOTI_num=$next_num";
+            $next_result=mysqli_query($dbConn, $next_sql);
+            $next_row=mysqli_fetch_array($next_result);
+            $next_noti_detail_tit=$next_row['OPC_NOTI_tit'];
+            // echo $next_noti_detail_tit;
+            ?>
+              <a href="/openconcert/page/notice/noti_view.php?num=<?=$next_num?>">
+              <?=$next_noti_detail_tit?>
+              </a></span>
+            </div>
+            <?php
+                }
+            ?>
           <div class="noti__btns">
             <div class="noti__btn">
               <a href="/openconcert/page/notice/notice.php" class="list-btn">목록</a>

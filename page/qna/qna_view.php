@@ -45,10 +45,6 @@
         $query = "SELECT * FROM opc_qna";
         $data = mysqli_query($dbConn, $query);
         $total_rows = mysqli_num_rows($data);
-        // 이전글 넘버
-        $prev_num=$qna_detail_num-1;
-        // 다음글 넘버
-        $next_num=$qna_detail_num+1;
       ?>
       <section class="view__section">
         <div class="sub-title">
@@ -72,9 +68,16 @@
             </div>
             <?php
                 } else {
+              // 이전글 넘버
+              $prev_num=$qna_detail_num-1;
+              $prev_sql="select * from opc_qna where OPC_QNA_num=$prev_num";
+              $prev_result=mysqli_query($dbConn, $prev_sql);
+              $prev_row=mysqli_fetch_array($prev_result);
+              $prev_qna_detail_tit=$prev_row['OPC_QNA_tit'];
+              // echo $prev_qna_detail_tit;
             ?>
             <a href="/openconcert/page/qna/qna_view.php?num=<?=$prev_num?>">
-              등록된 이전글이 있습니다.</a></span>
+              <?=$prev_qna_detail_tit?></a></span>
               </div>
             <?php
                 }
@@ -88,10 +91,18 @@
             </div>
             <?php
                 } else {
-            ?><a href="/openconcert/page/qna/qna_view.php?num=<?=$next_num?>">
-              등록된 다음글이 있습니다.
-            </a></span>
-              </div>
+            // 다음글 넘버
+            $next_num=$qna_detail_num+1;
+            $next_sql="select * from opc_qna where OPC_QNA_num=$next_num";
+            $next_result=mysqli_query($dbConn, $next_sql);
+            $next_row=mysqli_fetch_array($next_result);
+            $next_qna_detail_tit=$next_row['OPC_QNA_tit'];
+            // echo $next_qna_detail_tit;
+            ?>
+              <a href="/openconcert/page/qna/qna_view.php?num=<?=$next_num?>">
+              <?=$next_qna_detail_tit?>
+              </a></span>
+            </div>
             <?php
                 }
             ?>
