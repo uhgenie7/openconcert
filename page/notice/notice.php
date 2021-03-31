@@ -31,6 +31,7 @@
           <h2><a href="/openconcert/page/notice/notice.php">NOTICE</a></h2>
         </div>
         <div class="noti__container center">
+          <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/noti-search.php" ?>
           <ul class="noti__lists">
             <li class="noti__title">
               <span class="noti-num">번호</span>
