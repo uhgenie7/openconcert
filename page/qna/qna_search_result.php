@@ -41,28 +41,54 @@
               <span class="qna-reg">등록일</span>
               <span class="qna-hit">조회수</span>
             </li>
+
                 <?php
-                    include $_SERVER['DOCUMENT_ROOT'].'/openconcert/process/connect/db_connect.php';
-                    $sql="select * from opc_qna order by OPC_QNA_num desc limit 5";
-                    $qna_result=mysqli_query($dbConn, $sql);
-                    while($qna_row=mysqli_fetch_array($qna_result)){
-                      $qna_res_num=$qna_row['OPC_QNA_num'];
-                      $qna_res_id=$qna_row['OPC_QNA_name'];
-                      $qna_res_tit=$qna_row['OPC_QNA_tit'];
-                      $qna_res_reg=$qna_row['OPC_QNA_reg'];
-                      $qna_res_hit=$qna_row['OPC_QNA_hit'];
+                $search_select=$_GET['findType'];
+                $search_input=$_GET['findWord'];
+
+                // echo $search_select, $search_input;
+                //database connect
+                include $_SERVER['DOCUMENT_ROOT'].'/openconcert/process/connect/db_connect.php';
+
+                if($search_select == 'all'){
+                  $sql="select * from opc_qna where OPC_QNA_tit LIKE '%$search_input%' || OPC_QNA_desc LIKE '%$search_input%' || OPC_QNA_name LIKE '%$search_input%' order by OPC_QNA_num desc";
+                } else if($search_select == 'title') {
+                   $sql="select * from opc_qna where OPC_QNA_tit LIKE '%$search_input%' order by OPC_QNA_num desc";
+                } else if($search_select == 'userId') {
+                   $sql="select * from opc_qna where OPC_QNA_name LIKE '%$search_input%' order by OPC_QNA_num desc";
+                } else {
+                  $sql="select * from opc_qna where OPC_QNA_desc LIKE '%$search_input%' order by OPC_QNA_num desc";
+                }
+
+                $search_result=mysqli_query($dbConn, $sql);
+                $search_result_num=mysqli_num_rows($search_result);
+
+                if(!$search_result_num){
+                  echo '<li style="padding:10px; width:100%; text-align:center;">등록된 게시물이 없습니다.</li>';
+                } else {
+                  while($search_result_row=mysqli_fetch_array($search_result)){
+                    $result_num=$search_result_row['OPC_QNA_num'];
+                    $result_id=$search_result_row['OPC_QNA_name'];
+                    $result_tit=$search_result_row['OPC_QNA_tit'];
+                    $result_reg=$search_result_row['OPC_QNA_reg'];
+                    $result_hit=$search_result_row['OPC_QNA_hit'];
                 ?>
-              <li class="qna__title">
-                <span class="qna-num"><?=$qna_res_num?></span>
-                <span class="qna-id"><?=$qna_res_id?></span>
-                <span class="qna-tit"><a href="/openconcert/page/qna/qna_view.php?num=<?=$qna_res_num?>"class="qna-link"><?=$qna_res_tit?></a></span>
-                <span class="qna-reg"><?=$qna_res_reg?></span>
-                <span class="qna-hit"><?=$qna_res_hit?></span>
-              </li>
+
+                <li class="qna__title">
+                  <span class="qna-num"><?=$result_num?></span>
+                  <span class="qna-id"><?=$result_id?></span>
+                  <span class="qna-tit"><a href="/openconcert/page/qna/qna_view.php?num=<?=$result_num?>"class="qna-link"><?=$result_tit?></a></span>
+                  <span class="qna-reg"><?=$result_reg?></span>
+                  <span class="qna-hit"><?=$result_hit?></span>
+                </li>
                 <?php
+                  }
                 }
                 ?>
           </ul>
+
+
+ 
           <div class="pager">
                   <a href="#" class="page">
                     <img src="/openconcert/img/pager-prev-2.png" alt="pager-prev-2">
