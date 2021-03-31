@@ -1,9 +1,9 @@
 <meta charset="UTF-8" />
 <?php
     $qna_update_num=$_GET['num'];
-    $qna_title = nl2br($_REQUEST['qna_title']);
+    $qna_title = $_REQUEST['qna_title'];
     $qna_title = addslashes($qna_title);
-    $qna_desc = nl2br($_REQUEST['qna_desc']);
+    $qna_desc = $_REQUEST['qna_desc'];
     $qna_desc = addslashes($qna_desc);
     $regist_day = date("Y-m-d");
 
