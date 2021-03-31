@@ -76,7 +76,8 @@ body {
 
 button,
 textarea,
-input {
+input,
+select {
   font-family: "Noto Sans KR", sans-serif;
 }
 
