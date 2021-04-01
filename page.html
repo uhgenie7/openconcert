@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="EUC-KR" />
+    <link rel="stylesheet" href="/openconcert/css/style.css" />
+    <link rel="stylesheet" href="/openconcert/css/subpage.css" />
+    <title>Paging</title>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    let totalData = 1000; // 총 데이터 수
+    let dataPerPage = 20; // 한 페이지에 나타낼 데이터 수
+    let pageCount = 10; // 한 화면에 나타낼 페이지 수
+
+    function paging(totalData, dataPerPage, pageCount, currentPage) {
+      console.log("currentPage : " + currentPage);
+
+      let totalPage = Math.ceil(totalData / dataPerPage); // 총 페이지 수
+
+      console.log("totalPage : " + totalPage);
+
+      let pageGroup = Math.ceil(currentPage / pageCount); // 페이지 그룹
+
+      console.log("pageGroup : " + pageGroup);
+
+      let last = pageGroup * pageCount; // 화면에 보여질 마지막 페이지 번호
+      if (last > totalPage) last = totalPage;
+      let first = last - (pageCount - 1); // 화면에 보여질 첫번째 페이지 번호
+      let next = last + 1; //마지막 번호 바로 다음
+      let prev = first - 1; //첫번째 번호 바로 이전
+
+      let lastPage = totalPage;
+
+      console.log("last : " + last);
+      console.log("first : " + first);
+      console.log("next : " + next);
+      console.log("prev : " + prev);
+      console.log("lastpage : " + totalPage);
+
+      let $pingingView = $("#paging");
+
+      let html = "";
+      if (pageGroup >= 2)
+        //페이지그룹이 2보다 보다 크거나 같으면? 맨 처음으로 가게 해주세요.
+        html +=
+          "<a href=/openconcert/page/qna/qna.php?page=1 id='prev'><img src='/openconcert/img/pager-prev-2.png' alt='pager-prev-2'></a> "; //prev가 0보다 클 때 (즉, 최초 생성)
+
+      if (prev > 0)
+        html +=
+          "<a href='/openconcert/page/qna/qna.php?page=" +
+          prev +
+          "'+  id='prev'><img src='/openconcert/img/pager-prev-1.png' alt='pager-prev-1'></a> "; //prev가 0보다 클 때 (즉, 최초 생성)
+
+      for (let i = first; i <= last; i++) {
+        html +=
+          "<a href='/openconcert/page/qna/qna.php?page=" +
+          i +
+          "'+ id=" +
+          i +
+          ">" +
+          i +
+          "</a> ";
+      }
+
+      if (last < totalPage)
+        html +=
+          "<a href='/openconcert/page/qna/qna.php?page=" +
+          next +
+          "'+ id='next'><img src='/openconcert/img/pager-next-1.png' alt='pager-next-1'></a>";
+
+      if ((last = totalPage))
+        html +=
+          "<a href='/openconcert/page/qna/qna.php?page=" +
+          totalPage +
+          "'+ id='last'><img src='/openconcert/img/pager-next-2.png' alt='pager-next-2'></a>";
+
+      $("#pager").html(html); // 페이지 목록 생성
+      $("#pager a#" + currentPage).addClass("on");
+      // 현재 페이지 표시
+
+      $("#pager a").click(function () {
+        console.log(this);
+        let $item = $(this);
+        let $id = $item.attr("id");
+        let selectedPage = $item.text();
+
+        if ($id == "next") selectedPage = next;
+        if ($id == "prev") selectedPage = prev;
+
+        paging(totalData, dataPerPage, pageCount, selectedPage);
+      });
+    }
+
+    $("document").ready(function () {
+      paging(totalData, dataPerPage, pageCount, 1);
+    });
+  </script>
+
+  <body>
+    <div id="pager" class="pager"></div>
+  </body>
+</html>

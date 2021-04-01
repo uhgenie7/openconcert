@@ -15,7 +15,7 @@
     echo "
     <script>
       alert('수정이 완료되었습니다.');
-      location.href='/openconcert/page/qna/qna.php';
+      location.href='/openconcert/page/qna/qna.php?page=1';
     </script>
   ";
 ?>

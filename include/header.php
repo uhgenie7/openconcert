@@ -62,7 +62,7 @@
             <li><a href="/openconcert/page/perform/perform.php">공연목록</a></li>
             <li><a href="/openconcert/page/notice/notice.php">공지사항</a></li>
             <li>
-              <a href="/openconcert/page/qna/qna.php">Q&A</a>
+              <a href="/openconcert/page/qna/qna.php?page=1">Q&A</a>
             </li>
             <li><a href="/openconcert/page/goods/goods.php">굿즈스토어</a></li>
           </ul>

@@ -48,7 +48,7 @@
       ?>
       <section class="view__section">
         <div class="sub-title">
-          <h2><a href="/openconcert/page/qna/qna.php">Q&A</a></h2>
+          <h2><a href="/openconcert/page/qna/qna.php?page=1">Q&A</a></h2>
         </div>
         <div class="view__container center">
           <div class="view-title">
