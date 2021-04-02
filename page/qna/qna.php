@@ -42,9 +42,8 @@
               <span class="qna-hit">조회수</span>
             </li>
             <?php
-              $from = ($pageNum-1) * $pageCount;
-                  include $_SERVER['DOCUMENT_ROOT'].'/openconcert/process/connect/db_connect.php';
-                  $sql="select * from opc_qna order by OPC_QNA_num desc limit $from, $pageCount";
+                 include $_SERVER['DOCUMENT_ROOT'].'/openconcert/process/connect/db_connect.php';
+                  $sql="select * from opc_qna order by OPC_QNA_num desc limit $offset, $list_num";
                   $qna_result=mysqli_query($dbConn, $sql);
                   while($qna_row=mysqli_fetch_array($qna_result)){
                     $qna_res_num=$qna_row['OPC_QNA_num'];
@@ -54,48 +53,49 @@
                     $qna_res_hit=$qna_row['OPC_QNA_hit'];
             ?>
             <li class="qna__title">
-              <span class="qna-num"><?=$qna_res_num?></span>
+              <span class="qna-num"><?=$cur_num?></span>
               <span class="qna-id"><?=$qna_res_id?></span>
-              <span class="qna-tit"><a href="/openconcert/page/qna/qna_view.php?num=<?=$qna_res_num?>"class="qna-link"><?=$qna_res_tit?></a></span>
+              <span class="qna-tit"><a href="/openconcert/page/qna/qna_view.php?page=<?=$page?>&num=<?=$qna_res_num?>"class="qna-link"><?=$qna_res_tit?></a></span>
               <span class="qna-reg"><?=$qna_res_reg?></span>
               <span class="qna-hit"><?=$qna_res_hit?></span>
             </li>
             <?php
-            }
+              $cur_num --;}
             ?>
           </ul>
           <!-- pager -->
           <div class="pager">
             <?php
             //  페이징 디자인  // 
-            if($pageGroup >= 2){
-              //페이지그룹이 2보다 보다 크거나 같으면? 맨 처음으로 가게 해주세요.
+            if($block > 1) {
+                $prev=$first-1;
             ?>  
               <a href='/openconcert/page/qna/qna.php?page=1' id='prev' class="page"><img src='/openconcert/img/pager-prev-2.png' alt='pager-prev-2'></a>
             <?php
                 }
-            if ($prev > 5){
-              //prev가 5보다 클 때 (즉, 최초 생성)
+            if($page > 1) {
+              $go_page=$page-1;
             ?>
-                  <a href='/openconcert/page/qna/qna.php?page=<?=$prev?>' class="page"><img src='/openconcert/img/pager-prev-1.png' alt='pager-prev-1'></a>
+                  <a href='/openconcert/page/qna/qna.php?page=<?=$go_page?>' class="page"><img src='/openconcert/img/pager-prev-1.png' alt='pager-prev-1'></a>
           <?php
                 }
-            for ($p=$first; $p<=$last; $p++) {
-              if($pageNum==$p) {
+            for ($page_link=$first+1;$page_link<=$last;$page_link++) {
+              if($page_link==$page) {
           ?>
-              <a class="page on"><?=$p?></a>
+              <a class="page on"><?=$page_link?></a>
           <?php 
             }else {
           ?>
-            <a href='/openconcert/page/qna/qna.php?page=<?=$p?>' class="page"><?=$p?></a> 
+            <a href='/openconcert/page/qna/qna.php?page=<?=$page_link?>' class="page"><?=$page_link?></a> 
           <?php
             }
           ?>
           <?php
                 }
-                if ($last < $total_page) {
+                if ($block < $total_block) {
+                  $next=$last+1;
           ?>
-                    <a href='/openconcert/page/qna/qna.php?page=<?=$next?>' class="page"><img src='/openconcert/img/pager-next-1.png' alt='pager-next-1'></a>
+                    <a href='/openconcert/page/qna/qna.php?page=<?=$total_page?>' class="page"><img src='/openconcert/img/pager-next-1.png' alt='pager-next-1'></a>
           <?php
                 }
                 if ($last = $total_page) {

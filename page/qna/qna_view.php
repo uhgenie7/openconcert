@@ -60,21 +60,27 @@
           <div class="view-des">
             <p><?=$qna_detail_new_des?></p>
           </div>
+          <!-- view-list start -->
             <div class="view-list">이전글<span class="view-prev">
             <?php
             if($qna_detail_num - 1 == 0){
+              include $_SERVER['DOCUMENT_ROOT'].'/openconcert/process/connect/db_connect.php';
+              $sql="SELECT * FROM opc_qna WHERE OPC_QNA_num > $qna_detail_num";
+              $prev_result=mysqli_query($dbConn, $sql);
+              $prev_row=mysqli_fetch_array($prev_result);
+              $prev_qna_detail_tit=$prev_row['OPC_QNA_tit'];
             ?>
-              등록된 이전글이 없습니다.</span>
+              등록된 이전글이 없습니다.
+              </span>
             </div>
             <?php
                 } else {
               // 이전글 넘버
-              $prev_num=$qna_detail_num-1;
-              $prev_sql="select * from opc_qna where OPC_QNA_num=$prev_num";
-              $prev_result=mysqli_query($dbConn, $prev_sql);
+              $sql="SELECT * FROM opc_qna WHERE OPC_QNA_num < $qna_detail_num ORDER BY OPC_QNA_num desc limit 1";
+              $prev_result=mysqli_query($dbConn, $sql);
               $prev_row=mysqli_fetch_array($prev_result);
+              $prev_num=$prev_row['OPC_QNA_num'];
               $prev_qna_detail_tit=$prev_row['OPC_QNA_tit'];
-              // echo $prev_qna_detail_tit;
             ?>
             <a href="/openconcert/page/qna/qna_view.php?num=<?=$prev_num?>">
               <?=$prev_qna_detail_tit?></a></span>
@@ -84,7 +90,14 @@
             ?>
             <div class="view-list">다음글<span class="view-next">
             <?php
-            if($qna_detail_num == $total_rows){
+            // 현재 페이지가 마지막 페이지?
+            $sql="SELECT * FROM opc_qna WHERE OPC_QNA_num ORDER BY OPC_QNA_num desc limit 1";
+            $result=mysqli_query($dbConn, $sql);
+            $row=mysqli_fetch_array($result);
+            $number=$row['OPC_QNA_num'];
+            if($qna_detail_num==$number){
+              // 현재 페이지 번호 31번, 전체 로우 갯수 28개, 다음 게시글??
+              // 전체 로우 갯수를 세고, 
             ?>
               등록된 다음글이 없습니다.
             </span>
@@ -92,12 +105,11 @@
             <?php
                 } else {
             // 다음글 넘버
-            $next_num=$qna_detail_num+1;
-            $next_sql="select * from opc_qna where OPC_QNA_num=$next_num";
-            $next_result=mysqli_query($dbConn, $next_sql);
-            $next_row=mysqli_fetch_array($next_result);
-            $next_qna_detail_tit=$next_row['OPC_QNA_tit'];
-            // echo $next_qna_detail_tit;
+              $next_sql="SELECT * FROM opc_qna WHERE OPC_QNA_num > $qna_detail_num limit 1";
+              $next_result=mysqli_query($dbConn, $next_sql);
+              $next_row=mysqli_fetch_array($next_result);
+              $next_num=$next_row['OPC_QNA_num'];
+              $next_qna_detail_tit=$next_row['OPC_QNA_tit'];
             ?>
               <a href="/openconcert/page/qna/qna_view.php?num=<?=$next_num?>">
               <?=$next_qna_detail_tit?>
@@ -106,10 +118,9 @@
             <?php
                 }
             ?>
-
           <div class="qna__btns">
             <div class="qna__btn">
-              <a href="/openconcert/page/qna/qna.php" class="list-btn">목록</a>
+              <a href="/openconcert/page/qna/qna.php?page=1" class="list-btn">목록</a>
             </div>
           <?php
             if($userid == $qna_detail_name){
