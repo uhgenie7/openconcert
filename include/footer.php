@@ -3,9 +3,7 @@
           <div class="footer__info">
             <div class="footer__logo">
               <div class="opc__logo">
-                <h1>
                   <img src="/openconcert/img/logo.png" alt="footer-logo" />
-                </h1>
               </div>
             </div>
             <div>

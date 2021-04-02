@@ -26,9 +26,11 @@
             <a href="/openconcert/page/opc/opc.php" class="header__link">안내</a>
           </div>
           <div class="header__info">
-            <a href="/openconcert/index.php"
-              ><img src="/openconcert/img/logo.png" alt="logo" class="logo"
-            /></a>
+            <h1>
+              <a href="/openconcert/index.php"
+                ><img src="/openconcert/img/logo.png" alt="main-logo" class="logo"
+              /></a>
+            </h1>
           </div>
           <div class="header__info">
             <?php
