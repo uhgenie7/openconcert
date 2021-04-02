@@ -28,6 +28,7 @@
     <div class="wrap">
       <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/header.php" ?>
       <section class="search__section">
+        <h2 class="search__title">Search</h2>
         <div class="search__container">
           <input
             type="text"

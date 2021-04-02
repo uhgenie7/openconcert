@@ -234,6 +234,11 @@ select {
   z-index: 2;
 }
 
+.search__title {
+  opacity: 0;
+  cursor: default;
+}
+
 .search__input {
   width: 70%;
   height: 100%;
