@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/openconcert/img/favicon.png"
-    />
-    <!-- awesome font -->
-    <script
-      src="https://kit.fontawesome.com/4d645dbcdc.js"
-      crossorigin="anonymous"
-    ></script>
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/head.php" ?>
     <!-- css file -->
     <link rel="stylesheet" href="/openconcert/css/style.css" />
     <link rel="stylesheet" href="/openconcert/css/subpage.css" />
@@ -113,7 +99,7 @@
           ?>
             <div class="noti__btn">
               <a href="/openconcert/page/notice/noti_modi.php?num=<?=$noti_detail_num?>" class="modi-btn">수정</a>
-              <button class="delete-btn">삭제</button>
+              <button class="delete-btn" onclick="confirmDel()">삭제</button>
             </div>
             <?php
                 } else {
@@ -129,5 +115,15 @@
     <!-- js script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/openconcert/js/custom.js"></script>
+    <script>
+              function confirmDel(){
+                let confirmCheck = confirm('정말로 삭제하시겠습니까?')
+                if(confirmCheck == false){
+                  return false;
+                } else {
+                  location.href='/openconcert/process/noti/noti_delete.php?num=<?=$noti_detail_num?>';
+                }            
+              }
+    </script>
   </body>
 </html>
