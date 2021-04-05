@@ -47,7 +47,7 @@
                 $cur_num --;}
                 ?>
           </ul>
-                    <!-- pager -->
+          <!-- pager -->
           <div class="pager">
             <?php
             //  페이징 디자인  // 
@@ -77,9 +77,10 @@
           <?php
                 }
                 if ($block < $total_block) {
-                  $next=$last+1;
+                  $next_page=$page+1;
+                  // $next=$last+1;
           ?>
-                    <a href='/openconcert/page/notice/notice.php?page=<?=$total_page?>' class="page"><img src='/openconcert/img/pager-next-1.png' alt='pager-next-1'></a>
+                    <a href='/openconcert/page/notice/notice.php?page=<?=$next_page?>' class="page"><img src='/openconcert/img/pager-next-1.png' alt='pager-next-1'></a>
           <?php
                 }
                 if ($last = $total_page) {
