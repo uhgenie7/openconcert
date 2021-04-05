@@ -13,7 +13,7 @@
       <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/header.php" ?>
       <section class="noti__section">
         <div class="sub-title">
-          <h2><a href="/openconcert/page/notice/notice.php">NOTICE</a></h2>
+          <h2><a href="/openconcert/page/notice/notice.php?page=1">NOTICE</a></h2>
         </div>
 
         <div class="noti__container center">

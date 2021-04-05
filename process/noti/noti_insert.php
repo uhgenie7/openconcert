@@ -25,7 +25,7 @@
   echo "
     <script>
       alert('공지사항이 등록되었습니다.');
-      location.href='/openconcert/page/notice/notice.php';
+      location.href='/openconcert/page/notice/notice.php?page=1';
     </script>
     ";
 ?>

@@ -62,7 +62,7 @@
           <ul>
             <li class="active"><a href="/openconcert/page/opc/opc.php">오픈콘서트</a></li>
             <li><a href="/openconcert/page/perform/perform.php">공연목록</a></li>
-            <li><a href="/openconcert/page/notice/notice.php">공지사항</a></li>
+            <li><a href="/openconcert/page/notice/notice.php?page=1">공지사항</a></li>
             <li>
               <a href="/openconcert/page/qna/qna.php?page=1">Q&A</a>
             </li>
