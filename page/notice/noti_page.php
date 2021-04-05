@@ -1,5 +1,5 @@
 <?php
-    $page = ($_GET['page']) ? $_GET['page'] : 1;
+    $page = isset($_GET['page']) ? $_GET['page'] : 1;
     $list_num = 5; //한 페이지에 보여줄 목록 갯수 (data)
     $page_num = 5; //한 화면에 보여줄 페이지 링크(묶음) 갯수 (paging num count)
     $offset = $list_num*($page-1); 
