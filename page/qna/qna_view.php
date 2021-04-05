@@ -46,6 +46,16 @@
           <div class="view-des">
             <p><?=$qna_detail_new_des?></p>
           </div>
+          <div class="answer-box">
+            <ul class="list-reply">
+              <li id="#" class="reply-item">
+                답글1
+                <ul class="list-reply-comment">
+                  <li>답글2</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <!-- view-list start -->
             <div class="view-list">이전글<span class="view-prev">
             <?php
