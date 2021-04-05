@@ -10,7 +10,7 @@
                 </select>
               </div>
               <div class="qna__search">
-                <input type="text" placeholder="검색어를 입력해주세요." name="findWord" class="find-word">
+                <input type="text" placeholder="검색어를 입력해주세요." name="findWord" class="find-word" spellcheck="false">
                 <span class="search"></span>
                 <input type="submit" class="search-btn" value>
               </div>

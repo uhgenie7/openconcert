@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/openconcert/img/favicon.png"
-    />
-    <!-- awesome font -->
-    <script
-      src="https://kit.fontawesome.com/4d645dbcdc.js"
-      crossorigin="anonymous"
-    ></script>
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/head.php" ?>
     <!-- css file -->
     <link rel="stylesheet" href="/openconcert/css/style.css" />
     <link rel="stylesheet" href="/openconcert/css/subpage.css" />
@@ -41,9 +27,9 @@
         $noti_modi_hit=$row['OPC_NOTI_hit'];
         $noti_modi_reg=$row['OPC_NOTI_reg'];
       ?>
-          <form action="/openconcert/process/noti_update.php?num=<?=$noti_modi_num?>" method="post" name="noti_update">
+          <form action="/openconcert/process/noti/noti_update.php?num=<?=$noti_modi_num?>" method="post" name="noti_update">
             <label for="title" class="noti-title">제목</label>
-            <input type="text" value='<?=$noti_modi_tit?>' id="notiTitle" name="noti_title">
+            <input type="text" value='<?=$noti_modi_tit?>' id="notiTitle" name="noti_title" spellcheck="false">
             <label for="noti_desc" class="noti-desc">내용</label>
             <textarea id="noti_desc" class="noti__desc" name="noti_desc" spellcheck="false"><?=$noti_modi_des?></textarea>
           </form>
