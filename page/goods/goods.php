@@ -1,22 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/openconcert/img/favicon.png"
-    />
-    <!-- awesome font -->
-    <script
-      src="https://kit.fontawesome.com/4d645dbcdc.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/head.php" ?>
     <!-- css file -->
     <link rel="stylesheet" href="/openconcert/css/style.css" />
     <link rel="stylesheet" href="/openconcert/css/subpage.css" />

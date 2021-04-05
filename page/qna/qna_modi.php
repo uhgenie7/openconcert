@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/openconcert/img/favicon.png"
-    />
-    <!-- awesome font -->
-    <script
-      src="https://kit.fontawesome.com/4d645dbcdc.js"
-      crossorigin="anonymous"
-    ></script>
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/head.php" ?>
     <!-- css file -->
     <link rel="stylesheet" href="/openconcert/css/style.css" />
     <link rel="stylesheet" href="/openconcert/css/subpage.css" />
@@ -41,9 +27,9 @@
         $qna_modi_hit=$row['OPC_QNA_hit'];
         $qna_modi_reg=$row['OPC_QNA_reg'];
       ?>
-          <form action="/openconcert/process/qna_update.php?num=<?=$qna_modi_num?>" method="post" name="qna_update">
+          <form action="/openconcert/process/qna/qna_update.php?num=<?=$qna_modi_num?>" method="post" name="qna_update">
             <label for="title" class="qna-title">제목</label>
-            <input type="text" value='<?=$qna_modi_tit?>' id="qnaTitle" name="qna_title">
+            <input type="text" value='<?=$qna_modi_tit?>' id="qnaTitle" name="qna_title" spellcheck="false">
             <label for="qna_desc" class="qna-desc">내용</label>
             <textarea id="qna_desc" class="qna__desc" name="qna_desc" spellcheck="false"><?=$qna_modi_des?></textarea>
           </form>

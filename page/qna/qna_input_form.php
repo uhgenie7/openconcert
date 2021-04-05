@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/openconcert/img/favicon.png"
-    />
-    <!-- awesome font -->
-    <script
-      src="https://kit.fontawesome.com/4d645dbcdc.js"
-      crossorigin="anonymous"
-    ></script>
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/head.php" ?>
     <!-- css file -->
     <link rel="stylesheet" href="/openconcert/css/style.css" />
     <link rel="stylesheet" href="/openconcert/css/subpage.css" />
@@ -32,9 +18,9 @@
           <h2>UPLOAD</h2>
         </div>
         <div class="qna__container center">
-          <form action="/openconcert/process/qna_insert.php?id=<?=$userid?>" method="post" name="qna_form">
+          <form action="/openconcert/process/qna/qna_insert.php?id=<?=$userid?>" method="post" name="qna_form">
             <label for="title" class="qna-title">제목</label>
-            <input type="text" placeholder="제목을 입력해주세요." id="qnaTitle" name="qna_title">
+            <input type="text" placeholder="제목을 입력해주세요." id="qnaTitle" name="qna_title" spellcheck="false">
             <label for="qna_desc" class="qna-desc">내용</label>
             <textarea id="qna_desc" placeholder="내용을 입력해주세요." class="qna__desc" name="qna_desc" spellcheck="false"></textarea>
           </form>

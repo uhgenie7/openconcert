@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/openconcert/img/favicon.png"
-    />
-    <!-- awesome font -->
-    <script
-      src="https://kit.fontawesome.com/4d645dbcdc.js"
-      crossorigin="anonymous"
-    ></script>
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/head.php" ?>
     <!-- css file -->
     <link rel="stylesheet" href="/openconcert/css/style.css" />
     <link rel="stylesheet" href="/openconcert/css/login.css" />
@@ -37,23 +23,23 @@
             <form action="/openconcert/process/login/insertMembers.php" method="post" name="memberForm">
               <p class="idInputBox inputBox">
                 <label for="id">아이디</label>
-                <input type="text" name="id" class="form-join" id="id" placeholder="아이디를 입력해주세요.">
+                <input type="text" name="id" class="form-join" id="id" placeholder="아이디를 입력해주세요." spellcheck="false">
               </p>
               <p class="nameInputBox inputBox">
                 <label for="name">닉네임</label>
-                <input type="text" name="name" class="form-join" id="name" placeholder="닉네임을 입력해주세요.">
+                <input type="text" name="name" class="form-join" id="name" placeholder="닉네임을 입력해주세요." spellcheck="false">
               </p>
               <p class="passInputBox inputBox">
                 <label for="pass">비밀번호</label>
-                <input type="password" name="pass" class="form-join" id="pass" placeholder="비밀번호를 입력해주세요.">
+                <input type="password" name="pass" class="form-join" id="pass" placeholder="비밀번호를 입력해주세요." spellcheck="false">
               </p>
               <p class="checkInputBox inputBox">
                 <label for="pass">비밀번호 확인</label>
-                <input type="password" name="check" class="form-join" id="check" placeholder="비밀번호를 다시 한 번 입력해주세요.">
+                <input type="password" name="check" class="form-join" id="check" placeholder="비밀번호를 다시 한 번 입력해주세요." spellcheck="false">
               </p>
               <p class="emailInputBox inputBox">
                 <label for="email1">이메일</label>
-                <input type="text" name="email1" class="email1 form-join" id="email1" placeholder="이메일을 입력해주세요.">
+                <input type="text" name="email1" class="email1 form-join" id="email1" placeholder="이메일을 입력해주세요." spellcheck="false">
               </p>
               <div class="formBtns">
                 <button type="button" class="sendBtn join-btn">SEND</button>
