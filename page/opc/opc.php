@@ -15,7 +15,7 @@
       <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/header.php" ?>
       <section class="opc__section">
         <div class="sub-title">
-          <h2>ABOUT OPEN CONCERT</h2>
+          <h2><a href="/openconcert/page/opc/opc.php">ABOUT OPEN CONCERT</a></h2>
         </div>
         <div class="opc__container center">
           <div class="opc__about">

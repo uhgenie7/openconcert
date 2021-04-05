@@ -49,11 +49,11 @@
             <div class="view-list">이전글<span class="view-prev">
             <?php
             if($noti_detail_num - 1 == 0){
-              include $_SERVER['DOCUMENT_ROOT'].'/openconcert/process/connect/db_connect.php';
-              $sql="SELECT * FROM opc_noti WHERE OPC_NOTI_num > $noti_detail_num";
-              $prev_result=mysqli_query($dbConn, $sql);
-              $prev_row=mysqli_fetch_array($prev_result);
-              $prev_qna_detail_tit=$prev_row['OPC_NOTI_tit'];
+              // include $_SERVER['DOCUMENT_ROOT'].'/openconcert/process/connect/db_connect.php';
+              // $sql="SELECT * FROM opc_noti WHERE OPC_NOTI_num > $noti_detail_num";
+              // $prev_result=mysqli_query($dbConn, $sql);
+              // $prev_row=mysqli_fetch_array($prev_result);
+              // $prev_qna_detail_tit=$prev_row['OPC_NOTI_tit'];
             ?>
               등록된 이전글이 없습니다.</span>
             </div>

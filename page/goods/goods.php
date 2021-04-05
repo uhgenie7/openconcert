@@ -13,7 +13,7 @@
       <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/header.php" ?>
       <section class="goods__section">
         <div class="sub-title">
-          <h2>GOODS STORE</h2>
+          <h2><a href="/openconcert/page/goods/goods.php">GOODS STORE</a></h2>
         </div>
         <div class="goods__container center">
           <ul class="goods__lists">
