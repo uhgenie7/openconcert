@@ -1,9 +1,11 @@
 <meta charset="UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- seo -->
-<meta name="Keywords" content="온라인공연, 오픈콘서트, 언택트">
-<meta name="Description" content="오픈콘서트는 언택트 시대에 맞추어 온라인공연을 기획 및 제작, 유통을 전문으로 하는 크리에이티브 멀티미디어 플랫폼입니다.">
+<meta name="keywords" content="온라인공연, 오픈콘서트, 언택트">
+<meta name="description" content="오픈콘서트는 언택트 시대에 맞추어 온라인공연을 기획 및 제작, 유통을 전문으로 하는 크리에이티브 멀티미디어 플랫폼입니다.">
 <meta property="og:title" content="오픈콘서트">
 <meta property="og:url" content="http://uhj1993.dothome.co.kr/openconcert/">
 <meta property="og:type" content="website">
