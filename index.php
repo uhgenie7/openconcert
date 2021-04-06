@@ -42,7 +42,9 @@
         </div>
         <ul id="bestLists" class="best__lists">
           <li class="best__list">
-                <div class="best__video">1</div>
+                <div class="best__video">
+                  <img src="/openconcert/img/best/best1.jpg" alt="best1">
+                </div>
                 <h3>꽃이 없으면 쓸쓸한</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
@@ -50,7 +52,9 @@
                 </p>
           </li>
           <li class="best__list">
-                <div class="best__video">1</div>
+                <div class="best__video">
+                  <img src="/openconcert/img/best/best2.jpg" alt="best2">
+                </div>
                 <h3>꽃이 없으면 쓸쓸한</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
@@ -58,7 +62,9 @@
                 </p>
           </li>
           <li class="best__list">
-                <div class="best__video">1</div>
+                <div class="best__video">
+                  <img src="/openconcert/img/best/best3.jpg" alt="best3">
+                </div>
                 <h3>꽃이 없으면 쓸쓸한</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
@@ -66,7 +72,9 @@
                 </p>
           </li>
                     <li class="best__list">
-                <div class="best__video">1</div>
+                <div class="best__video">
+                  <img src="/openconcert/img/best/best4.jpg" alt="best4">
+                </div>
                 <h3>꽃이 없으면 쓸쓸한</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
