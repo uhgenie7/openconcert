@@ -22,6 +22,12 @@ http://uhj1993.dothome.co.kr/openconcert
 
 [오픈콘서트 기획서 (위와 같음)](https://uhj1993.github.io/openconcert/%EC%98%A4%ED%94%88%EC%BD%98%EC%84%9C%ED%8A%B8%20%EA%B8%B0%ED%9A%8D%EC%84%9C.pdf)
 
+## WBS
+
+프로젝트를 효율적으로 진행하기 위해 업무 일정을 계획하고 관리한 문서입니다.
+
+[WBS](https://docs.google.com/spreadsheets/d/e/2PACX-1vR71oWku2TE1K9M7kaqB681l4__3AYrjH1nBGyMUy7nlP0iodghhDyMrlDKDZRQMZf_em8CotyMQozJ/pubhtml)
+
 ## 주요 특징
 
 - 로그인, 회원가입, 로그아웃 기능
