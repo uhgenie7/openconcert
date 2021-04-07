@@ -144,7 +144,8 @@
 }
 
 /* perform section */
-.perform__container {
+.perform__container,
+.preview__container {
   margin: 5rem auto;
 }
 
@@ -184,6 +185,30 @@
 .perform-preview {
   margin-right: 0.5rem;
   background: rgb(224, 0, 127, 0.5);
+}
+
+/* perform preview section */
+.preview__video {
+  width: 1200px;
+  height: 525px;
+  background: #0f0f0f;
+  margin-bottom: 5rem;
+}
+
+.preview__video video {
+  width: 100%;
+}
+
+.preview__Info {
+  width: 1200px;
+  background: #0f0f0f;
+  color: #fff;
+  padding: 3rem;
+}
+
+.buy__btns {
+  text-align: center;
+  margin-top: 5rem;
 }
 
 /* notice section */
