@@ -4,6 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- seo -->
+<meta name="author" content="엄혜진">
 <meta name="keywords" content="온라인공연, 오픈콘서트, 언택트">
 <meta name="description" content="오픈콘서트는 언택트 시대에 맞추어 온라인공연을 기획 및 제작, 유통을 전문으로 하는 크리에이티브 멀티미디어 플랫폼입니다.">
 <meta property="og:title" content="오픈콘서트">
@@ -20,6 +21,8 @@
   sizes="16x16"
   href="/openconcert/img/favicon.png"
 />
+<link rel="apple-touch-icon" type="image/png"
+  sizes="16x16" href="/openconcert/img/favicon.png" />
 <!-- awesome font -->
 <script
   src="https://kit.fontawesome.com/4d645dbcdc.js"
