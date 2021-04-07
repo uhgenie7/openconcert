@@ -44,11 +44,21 @@
               </li>
             </ul>
           </div>
+          <!-- dummy -->
+          <div class="appBoxes"></div>
+          <!-- btn 수정 요망 -->
+          <div class="btns">
+            <button class="commonBtn loadMore">Loard More</button>
+            <a href="#" class="commonBtn toTop">Go To Top</a>
+            <a href="#" class="commonBtn">Upload Contents</a>
+        </div>
+        <!-- btn 수정 요망 end-->
       </section>
       <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/footer.php" ?>
     </div>
     <!-- js script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/openconcert/js/custom.js"></script>
+    <script src="/openconcert/js/perform.js"></script>
   </body>
 </html>
