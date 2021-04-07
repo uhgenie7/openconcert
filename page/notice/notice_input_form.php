@@ -17,10 +17,10 @@
         </div>
         <div class="noti__container center">
           <form action="/openconcert/process/noti/noti_insert.php" method="post" name="noti_form">
-            <label for="title" class="noti-title">제목</label>
+            <label for="notiTitle" class="noti-title">제목</label>
             <input type="text" placeholder="제목을 입력해주세요." id="notiTitle" name="noti_title" spellcheck="false">
-            <label for="noti_desc" class="noti-desc">내용</label>
-            <textarea id="noti_desc" placeholder="내용을 입력해주세요." class="noti__desc" name="noti_desc" spellcheck="false"></textarea>
+            <label for="notiDesc" class="noti-desc">내용</label>
+            <textarea id="notiDesc" placeholder="내용을 입력해주세요." class="noti__desc" name="noti_desc" spellcheck="false"></textarea>
           </form>
           <div class="noti__btns">
             <button class="write-btn">글쓰기</button>
