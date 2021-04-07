@@ -26,7 +26,7 @@ http://uhj1993.dothome.co.kr/openconcert
 
 프로젝트를 효율적으로 진행하기 위해 업무 일정을 계획하고 관리한 문서입니다.
 
-[WBS](https://docs.google.com/spreadsheets/d/e/2PACX-1vR71oWku2TE1K9M7kaqB681l4__3AYrjH1nBGyMUy7nlP0iodghhDyMrlDKDZRQMZf_em8CotyMQozJ/pubhtml)
+[WBS](https://docs.google.com/presentation/d/e/2PACX-1vRvYb6diHm2-jZfqPSNsAiJQOWUUhId_nOF1OqlmRL50jAeon4E2FYLRVuGqDhcYfQ8EhMt_aO-y_4V/pub?start=false&loop=false&delayms=3000)
 
 ## 주요 특징
 
