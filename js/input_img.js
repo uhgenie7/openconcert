@@ -20,11 +20,11 @@ $(function(){
       let dataURL = reader.result;
       // console.log(dataURL);
       
-      let output = document.querySelector("#img1");
-      // #img1 DOM으로 가져옴
+      let output = document.querySelector("#per-img");
+      // #per-img DOM으로 가져옴
       
       output.src=dataURL;
-      // #img1.src = dataURL
+      // #per-img.src = dataURL
     };
     
   }
