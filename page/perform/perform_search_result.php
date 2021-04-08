@@ -11,38 +11,24 @@
   <body>
     <div class="wrap">
       <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/header.php" ?>
-      <section class="qna__section">
+      <section class="perform__section">
         <div class="sub-title">
-          <h2><a href="/openconcert/page/qna/qna.php">Q&A</a></h2>
+          <h2><a href="/openconcert/page/perform/perform.php">PERFORM</a></h2>
         </div>
-
-        <div class="qna__container center">
-          <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/qna-search.php" ?>
-          <ul class="qna__lists">
-            <li class="qna__title">
-              <span class="qna-num">번호</span>
-              <span class="qna-id">아이디</span>
-              <span class="qna-tit">제목</span>
-              <span class="qna-reg">등록일</span>
-              <span class="qna-hit">조회수</span>
-            </li>
-
-                <?php
+        <div class="perform__container center">
+          <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/perform-search.php" ?>
+          <ul class="perform__lists">
+              <?php
                 $search_select=$_GET['findType'];
                 $search_input=$_GET['findWord'];
-
-                // echo $search_select, $search_input;
                 //database connect
                 include $_SERVER['DOCUMENT_ROOT'].'/openconcert/process/connect/db_connect.php';
-
                 if($search_select == 'all'){
-                  $sql="select * from opc_qna where OPC_QNA_tit LIKE '%$search_input%' || OPC_QNA_desc LIKE '%$search_input%' || OPC_QNA_name LIKE '%$search_input%' order by OPC_QNA_num desc";
+                  $sql="select * from opc_per where OPC_PER_tit LIKE '%$search_input%' || OPC_PER_desc LIKE '%$search_input%' order by OPC_PER_num desc";
                 } else if($search_select == 'title') {
-                   $sql="select * from opc_qna where OPC_QNA_tit LIKE '%$search_input%' order by OPC_QNA_num desc";
-                } else if($search_select == 'userId') {
-                   $sql="select * from opc_qna where OPC_QNA_name LIKE '%$search_input%' order by OPC_QNA_num desc";
+                  $sql="select * from opc_per where OPC_PER_tit LIKE '%$search_input%' order by OPC_PER_num desc";
                 } else {
-                  $sql="select * from opc_qna where OPC_QNA_desc LIKE '%$search_input%' order by OPC_QNA_num desc";
+                  $sql="select * from opc_per where OPC_PER_desc LIKE '%$search_input%' order by OPC_PER_num desc";
                 }
 
                 $search_result=mysqli_query($dbConn, $sql);
@@ -52,20 +38,25 @@
                   echo '<li style="padding:10px; width:100%; text-align:center;">등록된 게시물이 없습니다.</li>';
                 } else {
                   while($search_result_row=mysqli_fetch_array($search_result)){
-                    $result_num=$search_result_row['OPC_QNA_num'];
-                    $result_id=$search_result_row['OPC_QNA_name'];
-                    $result_tit=$search_result_row['OPC_QNA_tit'];
-                    $result_reg=$search_result_row['OPC_QNA_reg'];
-                    $result_hit=$search_result_row['OPC_QNA_hit'];
+                    $result_num=$search_result_row['OPC_PER_num'];
+                    $result_img=$search_result_row['OPC_PER_img'];
+                    $result_tit=$search_result_row['OPC_PER_tit'];
+                    $result_thumb=$search_result_row['OPC_PER_thumb'];
+                    $result_reg=$search_result_row['OPC_PER_reg'];
                 ?>
-
-                <li class="qna__title">
-                  <span class="qna-num"><?=$result_num?></span>
-                  <span class="qna-id"><?=$result_id?></span>
-                  <span class="qna-tit"><a href="/openconcert/page/qna/qna_view.php?num=<?=$result_num?>"class="qna-link"><?=$result_tit?></a></span>
-                  <span class="qna-reg"><?=$result_reg?></span>
-                  <span class="qna-hit"><?=$result_hit?></span>
-                </li>
+                <li class="perform__list">
+                        <div class="perform__imgbox">
+                          <img src="/openconcert/data/perform_page/perform_img/<?=$result_img?>" alt="<?=$result_tit?>">
+                        </div>
+                        <div class="perform__des">
+                          <h3><?=$result_tit?></h3>
+                          <p><?=$result_thumb?></p>
+                          <div class="perform__more">
+                            <button class="perform-preview" onClick="alert('준비중입니다')">미리보기</button>
+                            <button class="perform-buy" onClick="alert('준비중입니다')">결제하기</button>
+                          </div>
+                        </div>
+                      </li>
                 <?php
                   }
                 }
@@ -73,7 +64,7 @@
           </ul>
           <!-- pager 자리 구축 -->
           <!-- pager 자리 구축 end -->
-          <div class="qna__btns">
+          <div class="per__btns">
             <?php
               if($userid==''){
             ?>
@@ -81,7 +72,7 @@
             <?php
               } else {
               ?>
-                <button class="write-btn" onclick="location.href='/openconcert/page/qna/qna_input_form.php'">글쓰기</button>
+                <button class="write-btn" onclick="location.href='/openconcert/page/per/per_input_form.php'">글쓰기</button>
            <?php
               }
               ?>

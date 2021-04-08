@@ -68,28 +68,8 @@
                 }
                 ?>
           </ul>
-
-
- 
-          <div class="pager">
-                  <a href="#" class="page">
-                    <img src="/openconcert/img/pager-prev-2.png" alt="pager-prev-2">
-                  </a>
-                  <a href="#" class="page">
-                    <img src="/openconcert/img/pager-prev-1.png" alt="pager-prev-1">
-                  </a>
-                  <a href="#" class="on">1</a>
-                  <a href="#">2</a>
-                  <a href="#">3</a>
-                  <a href="#">4</a>
-                  <a href="#">5</a>
-                  <a href="#" class="page">
-                    <img src="/openconcert/img/pager-next-1.png" alt="pager-next-1">
-                  </a>
-                  <a href="#" class="page">
-                    <img src="/openconcert/img/pager-next-2.png" alt="pager-prev-2">
-                  </a>
-          </div>
+          <!-- pager 자리 구축 -->
+          <!-- pager 자리 구축 end -->
           <div class="noti__btns">
             <?php
               if($userid==''){
