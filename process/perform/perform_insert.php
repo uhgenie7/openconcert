@@ -97,7 +97,7 @@
 
   echo "
   <script>
-    location.href='/openconcert/index.php';
+    location.href='/openconcert/page/perform/perform.php';
   </script>
   ";
 ?>
