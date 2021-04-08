@@ -93,7 +93,8 @@
 }
 
 .qna__search,
-.noti__search {
+.noti__search,
+.perform__search {
   position: relative;
   width: 50%;
 }
@@ -159,12 +160,14 @@
 }
 
 .perform__des {
+  min-width: 826px;
+  min-height: 284px;
   background: #e0e0e0;
   position: relative;
   padding: 20px;
 }
 
-.perform__btns {
+.perform__more {
   position: absolute;
   right: 10px;
   bottom: 10px;
@@ -185,6 +188,50 @@
 .perform-preview {
   margin-right: 0.5rem;
   background: rgb(224, 0, 127, 0.5);
+}
+
+.perform__btns {
+  text-align: center;
+}
+
+.loadMore {
+  margin-right: 10px;
+}
+
+/* perform upload */
+.uploadName {
+  display: none;
+}
+
+.perform-info {
+  display: block;
+  width: 100%;
+  padding: 12px 12px;
+  color: #333;
+  font-size: 18px;
+  height: 70px;
+  border: #c9c9c9 2px solid;
+  border-radius: 6px;
+  outline: 0;
+  margin-bottom: 1rem;
+}
+
+.perform-desc {
+  width: 100%;
+  height: 412px;
+  background: #ffff;
+  display: block;
+  padding: 12px 12px;
+  color: #333;
+  font-size: 18px;
+  border: #c9c9c9 2px solid;
+  border-radius: 6px;
+  outline: 0;
+  margin-bottom: 1rem;
+}
+
+.submit__btns {
+  text-align: center;
 }
 
 /* perform preview section */
@@ -294,6 +341,7 @@
 }
 
 .write-btn,
+.loadMore,
 .modi-btn,
 .delete-btn,
 .list-btn {
