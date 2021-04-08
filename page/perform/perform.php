@@ -11,48 +11,22 @@
   <body>
     <div class="wrap">
       <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/header.php" ?>
-      <section class="opc__section">
+      <section class="perform__section">
         <div class="sub-title">
           <h2><a href="/openconcert/page/perform/perform.php">PERFORM LIST</a></h2>
         </div>
         <div class="perform__container center">
+        <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/perform-search.php" ?>
           <div class="perform__boxes">
             <ul class="perform__lists">
-              <li class="perform__list">
-                <div class="perform__imgbox">
-                  <img src="/openconcert/img/poster_1.png" alt="poster1" class="perform__img">
-                </div>
-                <div class="perform__des">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque sit molestiae totam quam labore temporibus sunt voluptate dolorum fuga laudantium perferendis culpa nihil assumenda, ducimus optio distinctio nostrum id earum?</p>
-                  <div class="perform__btns">
-                    <button class="perform-preview" onClick="alert('준비중입니다')">미리보기</button>
-                    <button class="perform-buy" onClick="alert('준비중입니다')">결제하기</button>
-                  </div>
-                </div>
-              </li>
-              <li class="perform__list">
-                <div class="perform__imgbox">
-                  <img src="/openconcert/img/poster_2.png" alt="poster2" class="perform__img">
-                </div>
-                <div class="perform__des">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque sit molestiae totam quam labore temporibus sunt voluptate dolorum fuga laudantium perferendis culpa nihil assumenda, ducimus optio distinctio nostrum id earum?</p>
-                  <div class="perform__btns">
-                    <button class="perform-preview" onClick="alert('준비중입니다')">미리보기</button>
-                    <button class="perform-buy" onClick="alert('준비중입니다')">결제하기</button>
-                  </div>
-                </div>
-              </li>
+            <!-- json start -->
             </ul>
           </div>
-          <!-- dummy -->
-          <div class="appBoxes"></div>
-          <!-- btn 수정 요망 -->
-          <div class="btns">
-            <button class="commonBtn loadMore">Loard More</button>
-            <a href="#" class="commonBtn toTop">Go To Top</a>
-            <a href="#" class="commonBtn">Upload Contents</a>
-        </div>
-        <!-- btn 수정 요망 end-->
+          <div class="perform__btns">
+            <button class="loadMore">더보기</button>
+            <!-- <button href="#" class="write-btn toTop">Go To Top</button> -->
+            <a href="/openconcert/page/perform/perform_input_form.php" class="write-btn">업로드</a>
+          </div>
       </section>
       <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/footer.php" ?>
     </div>
