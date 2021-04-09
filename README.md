@@ -30,7 +30,7 @@ http://uhj1993.dothome.co.kr/openconcert
 
 - 로그인, 회원가입, 로그아웃 기능
 - DB를 사용한 게시판 기능
-- 검색 기능
+- 공지사항, QNA, 공연 검색 기능
 - 게시판 다음글, 이전글 기능
 - 게시판 글 번호 페이징 기능
 
@@ -43,4 +43,12 @@ http://uhj1993.dothome.co.kr/openconcert
 - [JavaScript] 
 - [JQuery]
 
+
+## 플러그인
+
+이 사이트를 만드는데 쓰인 플러그인은 다음과 같습니다.
+
+| Plugin | Website |
+| ------ | ------ |
+| lightslider.js | http://sachinchoolur.github.io/lightslider/index.html |
 
