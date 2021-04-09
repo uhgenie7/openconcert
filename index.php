@@ -15,15 +15,17 @@
       <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/header.php" ?>
       <section class="search__section">
         <h2 class="search__title">Search</h2>
-        <div class="search__container">
-          <input
-            type="text"
-            class="search__input"
-            placeholder="제목을 입력해주세요"
-            spellcheck="false"
-          />
-          <button type="button" class="send__btn">검색</button>
-        </div>
+          <form action="/openconcert/page/perform/perform_search_result.php" method="get" name="performSearch" class="search__container">
+            <input
+              type="text"
+              class="search__input"
+              placeholder="제목을 입력해주세요"
+              spellcheck="false"
+              name="findWord"
+              autocomplete="off"
+            />
+            <button type="button" class="send__btn">검색</button>
+          </form>
         <div class="movie__back">
           <video loop autoplay muted controls>
             <source src="/openconcert/img/movie1.mov" />
