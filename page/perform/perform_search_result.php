@@ -19,7 +19,8 @@
           <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/perform-search.php" ?>
           <ul class="perform__lists">
               <?php
-                $search_select=$_GET['findType'];
+                $search_select = isset($_GET['findType']) ? $_GET['findType'] : 'all';
+                // $search_select=$_GET['findType'];
                 $search_input=$_GET['findWord'];
                 //database connect
                 include $_SERVER['DOCUMENT_ROOT'].'/openconcert/process/connect/db_connect.php';
