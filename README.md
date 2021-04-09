@@ -18,9 +18,7 @@ http://uhj1993.dothome.co.kr/openconcert
 
 ## 기획서
 
-[오픈콘서트 기획서](https://docs.google.com/presentation/d/e/2PACX-1vTbD3bpdKaryv3_hFpKWBlWJTx1jCcU8oAzXCEUJ6t481OHQOBtJYd9RgF6GvdZLe0nb4MaBhwoW-lU/pub?start=false&loop=false&delayms=3000)
-
-[오픈콘서트 기획서 (위와 같음)](https://uhj1993.github.io/openconcert/%EC%98%A4%ED%94%88%EC%BD%98%EC%84%9C%ED%8A%B8%20%EA%B8%B0%ED%9A%8D%EC%84%9C.pdf)
+[오픈콘서트 기획서](https://docs.google.com/presentation/d/e/2PACX-1vT7SNiYqB4WJ93WPxWnG-vvio4pEFR2do2SVi6K4RYMyiq2iSXXCiD010-p5xxKHTToUi-_No1UnhLK/pub?start=false&loop=false&delayms=3000)
 
 ## WBS
 
