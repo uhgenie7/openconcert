@@ -14,7 +14,7 @@
 
 ## 사이트
 
-http://uhj1993.dothome.co.kr/openconcert
+http://devuhj.com/openconcert/
 
 ## 기획서
 
