@@ -133,9 +133,14 @@ select {
 }
 
 .header__info:nth-child(2) {
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.logo {
+  padding-top: 8px;
 }
 
 .header__info:last-child {
