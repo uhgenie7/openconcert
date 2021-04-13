@@ -50,7 +50,7 @@
                           <img src="/openconcert/data/perform_page/perform_img/<?=$result_img?>" alt="<?=$result_tit?>">
                         </div>
                         <div class="perform__des">
-                          <h3><?=$result_tit?></h3>
+                          <h3><?=$result_tit?></h3> 
                           <p><?=$result_thumb?></p>
                           <div class="perform__more">
                             <button class="perform-preview" onClick="alert('준비중입니다')">미리보기</button>
@@ -67,19 +67,16 @@
           <!-- pager 자리 구축 end -->
           <div class="per__btns">
             <?php
-              if($userid==''){
+                if($userlevel == 1){
             ?>
-                <button class="write-btn" onclick="plzLogin()">글쓰기</button>
+              <button class="write-btn" onclick="location.href='/openconcert/page/perform/perform_input_form.php'">업로드</button>
             <?php
-              } else {
-              ?>
-                <button class="write-btn" onclick="location.href='/openconcert/page/per/per_input_form.php'">글쓰기</button>
-           <?php
-              }
-              ?>
+                } else {
+            ?>
+            <?php
+                }
+            ?>
         </div>
-        </div>
-
       </section>
       <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/footer.php" ?>
     </div>
