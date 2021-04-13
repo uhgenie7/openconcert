@@ -465,17 +465,22 @@
 
 .view-reg {
   display: flex;
+  border-bottom: 1px solid #ddd;
 }
 
 .view-reg p,
 .view-des p,
 .view-list {
   padding: 18px 20px 15px;
+}
+
+.view-des {
   border-bottom: 1px solid #ddd;
 }
 
 .view-list {
   color: #5b5b5b;
+  border-bottom: 1px solid #ddd;
 }
 
 .view-list a {
