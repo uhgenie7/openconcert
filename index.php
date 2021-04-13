@@ -34,56 +34,55 @@
       </section>
       <section class="best__section center">
         <div class="best__container">
-          <h2 class="best__title">Best Contents</h2>
-          <p class="best__p">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            corporis reiciendis voluptate id, rem iste cupiditate amet quos
-            nihil consequuntur molestiae dolor perferendis quis commodi suscipit
-            distinctio hic reprehenderit ipsum!
-          </p>
+          <div class="best__info">
+            <h2 class="best__title">Best Contents</h2>
+            <p class="best__p">
+              고객님들의 사랑을 가장 많이 받은 공연을 지금 바로 감상해보세요!
+            </p>
+          </div>
+          <ul id="bestLists" class="best__lists">
+            <li class="best__list">
+                  <div class="best__video">
+                    <img src="/openconcert/img/best/best1.jpg" alt="best1">
+                  </div>
+                  <h3 class="best__tit">꽃이 없으면 쓸쓸한</h3>
+                  <p class="best__desc">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
+                    nostrum consequuntur,
+                  </p>
+            </li>
+            <li class="best__list">
+                  <div class="best__video">
+                    <img src="/openconcert/img/best/best2.jpg" alt="best2">
+                  </div>
+                  <h3 class="best__tit">꽃이 없으면 쓸쓸한</h3>
+                  <p class="best__desc">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
+                    nostrum consequuntur,
+                  </p>
+            </li>
+            <li class="best__list">
+                  <div class="best__video">
+                    <img src="/openconcert/img/best/best3.jpg" alt="best3">
+                  </div>
+                  <h3 class="best__tit">꽃이 없으면 쓸쓸한</h3>
+                  <p class="best__desc">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
+                    nostrum consequuntur,
+                  </p>
+            </li>
+                      <li class="best__list">
+                  <div class="best__video">
+                    <img src="/openconcert/img/best/best4.jpg" alt="best4">
+                  </div>
+                  <h3 class="best__tit">꽃이 없으면 쓸쓸한</h3>
+                  <p class="best__desc">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
+                    nostrum consequuntur,
+                  </p>
+            </li>
+          </ul>
         </div>
-        <ul id="bestLists" class="best__lists">
-          <li class="best__list">
-                <div class="best__video">
-                  <img src="/openconcert/img/best/best1.jpg" alt="best1">
-                </div>
-                <h3>꽃이 없으면 쓸쓸한</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
-                  nostrum consequuntur,
-                </p>
-          </li>
-          <li class="best__list">
-                <div class="best__video">
-                  <img src="/openconcert/img/best/best2.jpg" alt="best2">
-                </div>
-                <h3>꽃이 없으면 쓸쓸한</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
-                  nostrum consequuntur,
-                </p>
-          </li>
-          <li class="best__list">
-                <div class="best__video">
-                  <img src="/openconcert/img/best/best3.jpg" alt="best3">
-                </div>
-                <h3>꽃이 없으면 쓸쓸한</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
-                  nostrum consequuntur,
-                </p>
-          </li>
-                    <li class="best__list">
-                <div class="best__video">
-                  <img src="/openconcert/img/best/best4.jpg" alt="best4">
-                </div>
-                <h3>꽃이 없으면 쓸쓸한</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
-                  nostrum consequuntur,
-                </p>
-          </li>
-        </ul>
       </section>
         <?php include $_SERVER["DOCUMENT_ROOT"]."/openconcert/include/footer.php" ?>
     </div>

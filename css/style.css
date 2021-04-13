@@ -198,7 +198,6 @@ select {
   top: 0%;
   visibility: visible;
   z-index: 21;
-  /* overflow-y: scroll; */
 }
 
 .header__nav li {
@@ -282,11 +281,20 @@ select {
 
 /* best section */
 .best__section {
-  margin: 3rem auto;
+  position: relative;
   height: auto;
+  min-height: 100vh;
 }
 
 .best__container {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.best__info {
   margin: auto;
   text-align: center;
 }
@@ -295,6 +303,10 @@ select {
   font-size: 2rem;
   text-transform: uppercase;
   color: #e0007f;
+}
+
+.best__p {
+  margin-bottom: 2rem;
 }
 
 .best__video {
@@ -312,6 +324,17 @@ select {
 .best__list {
   width: 33.33%;
   padding: 20px;
+}
+
+.best__video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.best__tit,
+.best__desc {
+  text-align: center;
 }
 
 /* footer */
