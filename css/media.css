@@ -198,6 +198,7 @@
   .wrap {
     overflow: hidden;
     padding-top: 69px;
+    padding-bottom: 155px;
   }
 
   .header__info:nth-child(2) {
@@ -233,5 +234,33 @@
   /* search */
   .search__input {
     font-size: 15px;
+  }
+
+  /* Best section*/
+  .best__container {
+    height: 100%;
+    padding: 2rem 0;
+  }
+
+  .best__desc {
+    display: none;
+  }
+
+  /* footer */
+  .footer {
+    padding: 1rem 0;
+  }
+
+  .footer__info {
+    text-align: center;
+  }
+
+  .footer__logo {
+    display: none;
+  }
+
+  /* subpage */
+  .sub-title h2 {
+    font-size: 30px;
   }
 }
