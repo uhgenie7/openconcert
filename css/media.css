@@ -100,6 +100,12 @@
   .qna-tit {
     width: 45%;
   }
+
+  /* login */
+  .login-form,
+  .join-form {
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -120,6 +126,12 @@
 
   .footer__info:first-child {
     margin-bottom: 20px;
+  }
+
+  /* login */
+  .login-form,
+  .join-form {
+    width: 90%;
   }
 
   /* subpage */
@@ -191,6 +203,24 @@
 
   .view-list {
     padding: 10px 20px 10px;
+  }
+
+  /* sub search */
+  .search-box {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .select-box {
+    width: 80%;
+    margin-right: 0px;
+    margin-bottom: 5px;
+  }
+
+  .qna__search,
+  .noti__search,
+  .perform__search {
+    width: 80%;
   }
 }
 
