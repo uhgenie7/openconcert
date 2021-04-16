@@ -133,6 +133,7 @@
 }
 
 .perform__list {
+  width: 100%;
   display: flex;
   margin-bottom: 2rem;
 }
@@ -142,7 +143,7 @@
 }
 
 .perform__des {
-  min-width: 826px;
+  width: 100%;
   min-height: 284px;
   background: #e0e0e0;
   position: relative;
@@ -258,8 +259,10 @@
   background: hotpink;
 }
 
-.noti__title .qna__title {
+.noti__title,
+.qna__title {
   background: #e0e0e0;
+  border-bottom: 1px solid #fff;
 }
 
 .noti-num,
