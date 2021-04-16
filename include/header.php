@@ -68,5 +68,28 @@
             </li>
             <li><a href="/openconcert/page/goods/goods.php">굿즈스토어</a></li>
           </ul>
+          <div class="nav__login">
+            <?php
+              if(!$userid){
+            ?>
+              <a href="/openconcert/page/login/join.php" class="nav--join">회원가입</a>
+              <a href="/openconcert/page/login/login.php" class="nav--login">로그인</a>
+            <?php 
+              } else {
+                  if($userlevel == 1) {
+            ?>
+              <a href="#" class="nav--my">ADMIN</a>
+              <a href="/openconcert/process/login/logout.php" class="nav--logout">로그아웃</a>
+            <?php
+            } else {
+            ?>
+              <a href="#" class="nav--my">마이페이지</a>
+              <a href="/openconcert/process/login/logout.php" class="nav--logout">로그아웃</a>
+
+            <?php
+                }
+              }
+            ?>
+          </div>
         </div>
 </header>

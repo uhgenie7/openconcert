@@ -192,6 +192,7 @@ select {
   background-size: cover;
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 72px;
@@ -215,6 +216,10 @@ select {
 
 .header__nav li a:hover {
   color: #e0007f;
+}
+
+.nav__login {
+  display: none;
 }
 
 /* search section */
