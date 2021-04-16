@@ -159,7 +159,12 @@
 
   .perform__imgbox {
     margin: auto;
-    width: 90%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .perform__imgbox img {
+    width: 100%;
   }
 
   .perform__img {
@@ -171,6 +176,7 @@
   }
 
   .perform__des {
+    min-width: auto;
     height: 250px;
   }
 
@@ -179,6 +185,7 @@
     left: 50%;
     right: 0;
     transform: translateX(-50%);
+    text-align: center;
   }
 
   .noti-num,
@@ -252,6 +259,33 @@
     display: none;
   }
 
+  .header__nav.show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav__login {
+    display: block;
+    margin-bottom: 2rem;
+  }
+  .nav__login a {
+    display: inline-block;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: #e0007f;
+    border: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  .nav__login .nav--join,
+  .nav__login .nav--logout {
+    background: #7f7f7f;
+  }
+
   .header .fa-bars,
   .header .fa-times {
     font-size: 40px;
@@ -289,8 +323,99 @@
     display: none;
   }
 
+  /* login */
+  .login__container,
+  .join__container {
+    padding: 1rem 0;
+  }
+
+  .form-login,
+  .form-join {
+    font-size: 15px;
+  }
+
+  .login-btn,
+  .join-btn {
+    height: auto;
+    font-size: 20px;
+    padding: 15px 10px;
+  }
+
+  .formBtns {
+    margin-bottom: 2rem;
+  }
+
   /* subpage */
+  .sub-title {
+    height: 100px;
+  }
   .sub-title h2 {
     font-size: 30px;
+  }
+
+  .perform__container,
+  .preview__container,
+  .noti__container,
+  .qna__container,
+  .view__container {
+    margin: 2rem auto;
+  }
+
+  .write-btn,
+  .loadMore,
+  .modi-btn,
+  .delete-btn,
+  .list-btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .perform__more {
+    width: 100%;
+  }
+
+  .noti__lists,
+  .qna__lists {
+    font-size: 12px;
+  }
+
+  .noti-id,
+  .qna-id {
+    width: 30%;
+  }
+
+  .noti-tit,
+  .qna-tit {
+    width: 60%;
+  }
+
+  .noti-reg,
+  .qna-reg {
+    display: none;
+  }
+
+  .pager a {
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
+  }
+
+  /* view page */
+  .view-title h4 {
+    font-size: 17px;
+  }
+
+  .view-reg,
+  .view-des,
+  .view-list {
+    font-size: 14px;
+  }
+
+  .view-prev::before {
+    padding: 0 2px 0 2px;
+  }
+
+  .view-next::before {
+    padding: 0 2px 0 2px;
   }
 }
